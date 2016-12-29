@@ -1,3 +1,4 @@
+// labelXml necesita parametros  
 var labelXml = '';
 var label = dymo.label.framework.openLabelXml(labelXml);
 var printers = dymo.label.framework.getPrinters();

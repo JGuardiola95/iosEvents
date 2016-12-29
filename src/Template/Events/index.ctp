@@ -1,15 +1,7 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Acciones') ?></li>
-        <li><?= $this->Html->link(__('Usuarios'), [
-          'controller' => 'users',
-          'action' => 'index']) ?></li>
-    </ul>
-</nav>
-<div class="events index large-9 medium-8 columns content">
+<div class="events index large-12 medium-11 columns content">
     <h3><?= __('Events') ?></h3>
     <table cellpadding="0" cellspacing="0">
-      <h4 class="right"><?= $this->Html->link(__('New Event'), ['action' => 'add']) ?></h4>
+      <h4 class="right"><?= $this->Html->link(__('Nuevo evento'), ['action' => 'add']) ?></h4>
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
@@ -33,9 +25,9 @@
                 <td><?= h($event->created) ?></td>
                 <td><?= h($event->modified) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $event->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $event->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $event->id], ['confirm' => __('Are you sure you want to delete # {0}?', $event->id)]) ?>
+                    <?= $this->Html->link(__('Ver'), ['action' => 'view', $event->id]) ?>
+                    <?= $this->Html->link(__('Editar'), ['action' => 'edit', $event->id]) ?>
+                    <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $event->id], ['confirm' => __('Are you sure you want to delete # {0}?', $event->id)]) ?> 
                 </td>
             </tr>
             <?php endforeach; ?>
